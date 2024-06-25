@@ -1,5 +1,6 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
+const fetch = require('#utils/fetcher')
 
 async function chord(query) {
   return new Promise(async(resolve, reject) => {
