@@ -238,16 +238,14 @@ async function KodePos(query) {
   })
 }
 
-module.exports = {
-  chord,
-  XPanas,
-  TixID,
-  AcaraNow,
-  Jadwal_Sepakbola,
-  JadwalTV,
-  Steam,
-  Steam_Detail,
-  Lirik2,
-  Nomina,
-  KodePos
-}
+module.exports = chord
+module.exports = XPanas
+module.exports = TixID
+module.exports = AcaraNow
+module.exports = Jadwal_Sepakbola
+module.exports = JadwalTV
+module.exports = Steam
+module.exports = Steam_Detail
+module.exports = Lirik2
+module.exports = Nomina
+module.exports = KodePos
