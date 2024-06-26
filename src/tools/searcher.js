@@ -2,7 +2,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const fetch = require('#utils/fetcher')
 
-async function chord(query) {
+exports.chord = async (query) => {
   return new Promise(async(resolve, reject) => {
    const head = {"User-Agent":"Mozilla/5.0 (Linux; Android 9; CPH1923) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.62 Mobile Safari/537.36",
 	  "Cookie":"__gads=ID=4513c7600f23e1b2-22b06ccbebcc00d1:T=1635371139:RT=1635371139:S=ALNI_MYShBeii6AFkeysWDKiD3RyJ1106Q; _ga=GA1.2.409783375.1635371138; _gid=GA1.2.1157186793.1635371140; _fbp=fb.1.1635371147163.1785445876"};
@@ -18,7 +18,8 @@ async function chord(query) {
 	}).catch(reject);
 });
 }
-async function XPanas(search = 'indonesia') {
+
+exports.XPanas = async (search = 'indonesia') => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('http://164.68.127.15/?id=' + search)
@@ -38,7 +39,8 @@ async function XPanas(search = 'indonesia') {
     }
   })
 }
-async function TixID() {
+
+exports.TixID = async () => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://www.tix.id/tix-now/')
@@ -59,7 +61,8 @@ async function TixID() {
     }
   })
 }
-async function AcaraNow() {
+
+exports.AcaraNow = async () => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://www.jadwaltv.net/channel/acara-tv-nasional-saat-ini');
@@ -78,7 +81,8 @@ async function AcaraNow() {
     }
   })
 }
-async function Jadwal_Sepakbola() {
+
+exports.Jadwal_Sepakbola = async () => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://www.jadwaltv.net/jadwal-sepakbola');
@@ -95,7 +99,8 @@ async function Jadwal_Sepakbola() {
     }
   })
 }
-async function JadwalTV(query) {
+
+exports.JadwalTV = async (query) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://www.jadwaltv.net/channel/' + query);
@@ -112,7 +117,8 @@ async function JadwalTV(query) {
     }
   })
 }
-async function Steam(search) {
+
+exports.Steam = async (search) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data, status } = await axios.get('https://store.steampowered.com/search/?term=' + search)
@@ -149,7 +155,8 @@ async function Steam(search) {
     }
   })
 }
-async function Steam_Detail(url) {
+
+exports.Steam_Detail = async (url) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data, status } = await axios.get(url)
@@ -171,7 +178,8 @@ async function Steam_Detail(url) {
     }
   })
 }
-async function Lirik2(judul) {
+
+exports.Lirik2 = async (judul) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://www.musixmatch.com/search/' + judul),
@@ -192,7 +200,8 @@ async function Lirik2(judul) {
     }
   })
 }
-async function Nomina(query) {
+
+exports.Nomina = async (query) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://tesaurus.kemdikbud.go.id/tematis/lema/' + query + '/nomina');
@@ -211,7 +220,8 @@ async function Nomina(query) {
     }
   })
 }
-async function KodePos(query) {
+
+exports.KodePos = async (query) => {
   return new Promise(async (resolve, reject) => {
     try {
       const { data } = await axios.get('https://nomorkodepos.com/?s=' + query);
@@ -237,15 +247,3 @@ async function KodePos(query) {
     }
   })
 }
-
-module.exports.chord = chord
-module.exports.XPanas = XPanas
-module.exports.TixID = TixID
-module.exports.AcaraNow = AcaraNow
-module.exports.Jadwal_Sepakbola = Jadwal_Sepakbola
-module.exports.JadwalTV = JadwalTV
-module.exports.Steam = Steam
-module.exports.Steam_Detail = Steam_Detail
-module.exports.Lirik2 = Lirik2
-module.exports.Nomina = Nomina
-module.exports.KodePos = KodePos
