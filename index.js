@@ -45,14 +45,14 @@ async function loadModules(folder) {
 }
 
 module.exports = listModules
-module.exports = chord
-module.exports = XPanas
-module.exports = TixID
-module.exports = AcaraNow
-module.exports = Jadwal_Sepakbola
-module.exports = JadwalTV
-module.exports = Steam
-module.exports = Steam_Detail
-module.exports = Lirik2
-module.exports = Nomina
-module.exports = KodePos
+module.exports.chord = chord
+module.exports.XPanas = XPanas
+module.exports.TixID = TixID
+module.exports.AcaraNow = AcaraNow
+module.exports.Jadwal_Sepakbola = Jadwal_Sepakbola
+module.exports.JadwalTV = JadwalTV
+module.exports.Steam = Steam
+module.exports.Steam_Detail = Steam_Detail
+module.exports.Lirik2 = Lirik2
+module.exports.Nomina = Nomina
+module.exports.KodePos = KodePos
