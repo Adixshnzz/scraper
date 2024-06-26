@@ -1,18 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const {   
-  chord,
-  XPanas,
-  TixID,
-  AcaraNow,
-  Jadwal_Sepakbola,
-  JadwalTV,
-  Steam,
-  Steam_Detail,
-  Lirik2,
-  Nomina,
-  KodePos
-} = require('./src/tools/searcher.js')
 
 let listModules = {};
 (async () => {
@@ -45,14 +32,4 @@ async function loadModules(folder) {
 }
 
 module.exports = listModules
-module.exports.chord = chord
-module.exports.XPanas = XPanas
-module.exports.TixID = TixID
-module.exports.AcaraNow = AcaraNow
-module.exports.Jadwal_Sepakbola = Jadwal_Sepakbola
-module.exports.JadwalTV = JadwalTV
-module.exports.Steam = Steam
-module.exports.Steam_Detail = Steam_Detail
-module.exports.Lirik2 = Lirik2
-module.exports.Nomina = Nomina
-module.exports.KodePos = KodePos
+global.scrap = require('./src/tools/searcher.js')
