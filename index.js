@@ -32,4 +32,3 @@ async function loadModules(folder) {
 }
 
 module.exports = listModules
-global.scrap = require('./src/tools/searcher.js')
