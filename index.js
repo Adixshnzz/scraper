@@ -1,5 +1,18 @@
 const fs = require('fs')
 const path = require('path')
+const {   
+  chord,
+  XPanas,
+  TixID,
+  AcaraNow,
+  Jadwal_Sepakbola,
+  JadwalTV,
+  Steam,
+  Steam_Detail,
+  Lirik2,
+  Nomina,
+  KodePos
+} = require('./src/tools/searcher.js')
 
 let listModules = {};
 (async () => {
@@ -32,3 +45,16 @@ async function loadModules(folder) {
 }
 
 module.exports = listModules
+module.exports = {
+  chord,
+  XPanas,
+  TixID,
+  AcaraNow,
+  Jadwal_Sepakbola,
+  JadwalTV,
+  Steam,
+  Steam_Detail,
+  Lirik2,
+  Nomina,
+  KodePos
+}
